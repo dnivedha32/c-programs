@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void showMenu() {
+    printf("1. Tea\n");
+    printf("2. Coffee\n");
+    printf("3. Juice\n");
+}
+
+int main() {
+    showMenu();
+    return 0;
+}
+output:
+1. Tea
+2. Coffee
+3. Juice
