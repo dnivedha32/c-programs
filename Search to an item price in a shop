@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    float price[50], search;
+    int found = 0;
+
+    printf("Enter number of items: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("Enter price of item %d: ", i + 1);
+        scanf("%f", &price[i]);
+    }
+
+    printf("Enter price to search: ");
+    scanf("%f", &search);
+
+    for (i = 0; i < n; i++) {
+        if (price[i] == search) {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found)
+        printf("Item with price %.2f found\n", search);
+    else
+        printf("Item not found\n");
+
+    return 0;
+}
+output:
+Enter number of items: 4
+Enter price of item 1: 50
+Enter price of item 2: 120
+Enter price of item 3: 75
+Enter price of item 4: 200
+Enter price to search: 75
+Item with price 75.00 found
+
