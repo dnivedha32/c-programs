@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int empId;
+    float basic, hra, da, gross;
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &empId);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basic);
+
+    hra = basic * 0.20;
+    da  = basic * 0.10;
+    gross = basic + hra + da;
+
+    printf("\n--- Salary Slip ---\n");
+    printf("Employee ID : %d\n", empId);
+    printf("Basic Salary: %.2f\n", basic);
+    printf("HRA         : %.2f\n", hra);
+    printf("DA          : %.2f\n", da);
+    printf("Gross Salary: %.2f\n", gross);
+
+    return 0;
+}
+output:
+Enter Employee ID: 101
+Enter Basic Salary: 20000
+
+--- Salary Slip ---
+Employee ID : 101
+Basic Salary: 20000.00
+HRA         : 4000.00
+DA          : 2000.00
+Gross Salary: 26000.00
