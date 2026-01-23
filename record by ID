@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+struct student {
+    int id;
+    char name[20];
+};
+
+int main() {
+    struct student s[5] = {
+        {101, "Ravi"},
+        {102, "Anita"},
+        {103, "Kumar"},
+        {104, "Priya"},
+        {105, "Ramesh"}
+    };
+
+    int searchId, i, found = 0;
+
+    printf("Enter ID to search: ");
+    scanf("%d", &searchId);
+
+    for(i = 0; i < 5; i++) {
+        if(s[i].id == searchId) {
+            found = 1;
+            printf("\nRecord Found:\n");
+            printf("ID: %d\nName: %s\n", s[i].id, s[i].name);
+            break;
+        }
+    }
+
+    if(!found)
+        printf("Record not found.");
+
+    return 0;
+}
+O/P:
+Enter ID to search: 103
+
+Record Found:
+ID: 103
+Name: Kumar
