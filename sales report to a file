@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    float sales;
+
+    fp = fopen("sales.txt", "w");
+
+    printf("Enter total sales amount: ");
+    scanf("%f", &sales);
+
+    fprintf(fp, "Total Sales = %.2f", sales);
+
+    fclose(fp);
+
+    printf("Sales report written to file.");
+    return 0;
+}
+O/P:
+Enter total sales amount: 5000
