@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    char username[20], password[20];
+
+    fp = fopen("login.txt", "w");
+
+    printf("Enter username: ");
+    scanf("%s", username);
+
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    fprintf(fp, "Username: %s\nPassword: %s", username, password);
+
+    fclose(fp);
+
+    printf("Login details stored successfully.");
+    return 0;
+}
+O/P:
+Enter username: admin
+Enter password: 1234
