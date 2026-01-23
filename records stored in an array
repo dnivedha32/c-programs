@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+struct student {
+    int roll;
+    char name[20];
+};
+
+int main() {
+    struct student s[5] = {
+        {101, "Ravi"},
+        {102, "Anita"},
+        {103, "Kumar"},
+        {104, "Ramesh"},
+        {105, "Priya"}
+    };
+
+    int count = 5; // Total records
+
+    printf("Number of records = %d", count);
+    return 0;
+}
+O/P:
+Number of records = 5
