@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    int roll;
+    char name[20];
+
+    fp = fopen("student.txt", "w");
+
+    printf("Enter roll number: ");
+    scanf("%d", &roll);
+
+    printf("Enter name: ");
+    scanf("%s", name);
+
+    fprintf(fp, "Roll No: %d\nName: %s", roll, name);
+
+    fclose(fp);
+
+    printf("Student details saved to file.");
+    return 0;
+}
