@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+
+struct student {
+    int id;
+    char name[20];
+};
+
+int main() {
+    struct student s[5] = {
+        {101, "Ravi"},
+        {102, "Anita"},
+        {103, "Kumar"},
+        {104, "Priya"},
+        {105, "Ramesh"}
+    };
+
+    int updateId, i, found = 0;
+    char newName[20];
+
+    printf("Enter ID to update: ");
+    scanf("%d", &updateId);
+
+    for(i = 0; i < 5; i++) {
+        if(s[i].id == updateId) {
+            found = 1;
+            printf("Enter new name: ");
+            scanf("%s", newName);
+            strcpy(s[i].name, newName);
+
+            printf("\nRecord Updated:\n");
+            printf("ID: %d\nName: %s\n", s[i].id, s[i].name);
+            break;
+        }
+    }
+
+    if(!found)
+        printf("Record not found.");
+
+    return 0;
+}
+O/P:
+Enter ID to update: 104
+Enter new name: Nisha
+
+Record Updated:
+ID: 104
+Name: Nisha
